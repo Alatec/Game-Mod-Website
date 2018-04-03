@@ -12,7 +12,9 @@
         <Label Content="Games found on your machine" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,48,0,0"/>
         <TextBox x:Name="FileLocationTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="387" Margin="10,257,0,0"/>
         <Label Content="File Location" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" Width="148"/>
-        <Button x:Name="installButton" Content="Install" HorizontalAlignment="Left" Margin="426,257,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
+        <Button x:Name="installButton" Content="Install" HorizontalAlignment="Left" Margin="426,257,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="installButton_Click"/>
+        <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="27" Margin="10,285,0,0" VerticalAlignment="Top" Width="387"/>
+        <Label x:Name="successWindow" Content="Mod Installed Successfully!&#xD;&#xA;&#xD;&#xA;Don't forget to checkout the&#xD;&#xA;CheezMakrs on IG" HorizontalAlignment="Left" Margin="217,74,0,0" VerticalAlignment="Top" Height="146" Width="228" FontSize="20" Visibility="Hidden"/>
 
     </Grid>
 </Window>

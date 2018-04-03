@@ -15,6 +15,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.WindowsAPICodePack.Dialogs;
+using System.ComponentModel;
+using System.Threading;
 
 namespace DummyInstaller
 {
@@ -22,7 +24,10 @@ namespace DummyInstaller
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
+
     {
+
+        public bool canClose = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -76,6 +81,46 @@ namespace DummyInstaller
             }
             FileLocationTextBox.Text = path;
             installButton.IsEnabled = true;
+        }
+
+        private void installButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (canClose)
+            {
+                Environment.Exit(0);
+            }
+            else
+            {
+                BackgroundWorker worker = new BackgroundWorker();
+                worker.WorkerReportsProgress = true;
+                worker.DoWork += worker_DoWork;
+                worker.ProgressChanged += worker_ProgressChanged;
+                worker.RunWorkerCompleted += runFinish;
+
+                worker.RunWorkerAsync();
+            }
+        }
+
+        void worker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            for (int i = 0; i <= 100; i++)
+            {
+                (sender as BackgroundWorker).ReportProgress(i);
+                Thread.Sleep(10);
+            }
+            
+        }
+
+        void worker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar.Value = e.ProgressPercentage;
+        }
+
+        void runFinish(object sender, RunWorkerCompletedEventArgs e)
+        {
+            successWindow.Visibility = Visibility.Visible;
+            installButton.Content = "Close";
+            canClose = true;
         }
     }
 }
