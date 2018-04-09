@@ -117,10 +117,6 @@ nav a:hover, nav a:focus, nav a:active {
 }
 
 /*--- rec'd games/mod styles ---*/
-.recd-parent {
-}
-.recd {
-}
 .img {
 	background: #4A859D;
 	height: 150px;
@@ -143,9 +139,11 @@ a:active, a:hover, a:focus {
 		text-align: center;
 		margin-bottom: 0.5em;
 	}
+	.quick-links {
+		text-align: center;
+	}
 	nav { 
 		width: 80%;
-		text-align: center;
 		margin: auto;
 	}
 	nav li {
@@ -156,6 +154,10 @@ a:active, a:hover, a:focus {
 		display: block;
 		padding: 0.5em;
 		width: auto;	
+	}
+	.search {
+		width: 30%;
+		padding: 0.25em;
 	}
 	.recd-parent {
 		margin: auto;
@@ -184,20 +186,25 @@ a:active, a:hover, a:focus {
 		text-align: center;
 		letter-spacing: 2px;
 	}
-	nav, .content, .recd-parent {
+	.quick-links, .content, .recd-parent {
 		display: inline-block;
 		float: left;
 	}
-	nav {
+	.quick-links {
 		width: 25%;
 	}
 	nav {
+		width: 100%;
 	}
 	nav li {
 		margin-bottom: 0.25em;
 	}
 	nav a {
 		text-align: center;
+		padding: 0.25em;
+	}
+	.search {
+		width: 100%;
 		padding: 0.25em;
 	}
 	.content {
@@ -228,20 +235,25 @@ a:active, a:hover, a:focus {
 		text-align: center;
 		letter-spacing: 2px;
 	}
-	nav, .content, .recd-parent {
+	.quick-links, .content, .recd-parent {
 		display: inline-block;
 		float: left;
 	}
-	nav, .recd-parent {
+	.quick-links, .recd-parent {
 		width: 20%;
 	}
 	nav {
+		width: 100%;
 	}
 	nav li {
 		margin-bottom: 0.25em;
 	}
 	nav a {
 		text-align: center;
+		padding: 0.25em;
+	}
+	.search {
+		width: 100%;
 		padding: 0.25em;
 	}
 	.content {
@@ -263,15 +275,15 @@ a:active, a:hover, a:focus {
 		text-align: center;
 		letter-spacing: 2px;
 	}
-	nav, .content, .recd-parent {
-		display: inline-block;
-		float: left;
-	}
-	nav, .recd-parent {
+	.quick-links, .recd-parent {
 		width: 200px;
-		/*height: 600px;*/
 	}
 	nav {
+		width: 100%;
+	}
+	.quick-links, .content, .recd-parent {
+		display: inline-block;
+		float: left;
 	}
 	nav li {
 		margin-bottom: 0.25em;
@@ -280,10 +292,12 @@ a:active, a:hover, a:focus {
 		text-align: center;
 		padding: 0.25em;
 	}
+	.search {
+		width: 100%;
+		padding: 0.25em;
+	}
 	.content {
 		width: 718px;
 		margin: auto 1em;
-	}
-	.recd-parent {	
 	}
 }
