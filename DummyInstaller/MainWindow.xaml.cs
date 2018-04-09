@@ -122,6 +122,7 @@ namespace DummyInstaller
             cheezHubLogo.Visibility = Visibility.Visible;
             installButton.Content = "Close";
             canClose = true;
+            //Test
         }
     }
 }
