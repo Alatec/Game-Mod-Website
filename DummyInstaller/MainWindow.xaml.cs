@@ -119,6 +119,7 @@ namespace DummyInstaller
         void runFinish(object sender, RunWorkerCompletedEventArgs e)
         {
             successWindow.Visibility = Visibility.Visible;
+            cheezHubLogo.Visibility = Visibility.Visible;
             installButton.Content = "Close";
             canClose = true;
         }

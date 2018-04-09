@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
+        <Image x:Name="cheezHubLogo" Source="CheeseHubLogo.png" Margin="174,111,-158,45.5" RenderTransformOrigin="0.334,0.523" Visibility="Hidden"/>
+
         <ListBox x:Name="SteamGamesListBox" HorizontalAlignment="Left" Height="146" VerticalAlignment="Top" Width="159" Margin="10,74,0,0" SelectionChanged="SteamGamesListBox_SelectionChanged"/>
         <Label Content="Please select the game directory" Margin="10,10,322,279.5"/>
         <Label Content="Games found on your machine" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,48,0,0"/>
@@ -14,7 +16,7 @@
         <Label Content="File Location" HorizontalAlignment="Left" Margin="10,225,0,0" VerticalAlignment="Top" Width="148"/>
         <Button x:Name="installButton" Content="Install" HorizontalAlignment="Left" Margin="426,257,0,0" VerticalAlignment="Top" Width="75" IsEnabled="False" Click="installButton_Click"/>
         <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="27" Margin="10,285,0,0" VerticalAlignment="Top" Width="387"/>
-        <Label x:Name="successWindow" Content="Mod Installed Successfully!&#xD;&#xA;&#xD;&#xA;Don't forget to checkout the&#xD;&#xA;CheezMakrs on IG" HorizontalAlignment="Left" Margin="217,74,0,0" VerticalAlignment="Top" Height="146" Width="228" FontSize="20" Visibility="Hidden"/>
+        <Label x:Name="successWindow" HorizontalAlignment="Left" Margin="217,74,0,0" VerticalAlignment="Top" Height="146" Width="284" FontSize="20" Content="Mod Installed Successfully!" Visibility="Hidden"/>
 
     </Grid>
 </Window>
