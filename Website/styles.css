@@ -12,7 +12,7 @@ a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
-ol, ul, li,
+dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
@@ -34,9 +34,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-dd, ol {
-	padding: 10px;
-}
 ol, ul {
 	list-style: none;
 }
@@ -53,30 +50,6 @@ table {
 	border-spacing: 0;
 }
 
-/*--- main styles ---*/
-body {
-	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
-	font-size: 1em;
-	font-weight: normal;	
-}
-h1, h2, h3, h4, h5, h6 {
-	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
-	font-weight: bold;
-}
-h1 {
-	font-size: 3em;
-	margin-bottom: 1.5em;
-}
-h4 {
-	font-size: 1.5em;
-}
-p {
-	line-height: 1.5em;
-	text-indent: 0.5em;
-	margin-bottom: 1em;
-	padding: 0.5em;
-}
-
 /*
 	palette:
 		#403367 dark purple
@@ -87,9 +60,46 @@ p {
 		#2E4980 cobalt
 */
 
+/*--- main styles ---*/
 body {
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	font-size: 1em;
+	font-weight: normal;	
 	background: #A1C0BB;
 }
+h1, h2, h3, h4, h5, h6 {
+	font-family: Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+	font-weight: bold;
+}
+h1 {
+	font-size: 3em;
+	margin-bottom: 1.5em;
+}
+h3, h2, h4 {
+	font-size: 1.5em;
+}
+p {
+	line-height: 1.5em;
+	text-indent: 0.5em;
+	margin-bottom: 1em;
+	padding: 0.5em;
+}
+dl {
+	padding: 0.5em;
+	margin-left: 1em;
+}
+dd {
+	margin-bottom: 0.5em;
+}
+ol, ul {
+	padding: 0.25em;
+	margin-left: 1em;
+	margin-bottom: 0.5em;
+}
+ol li, ul li {
+	margin-bottom: 0.5em;
+}
+
 
 .container {
 	background: #FFEBCB;
@@ -105,6 +115,13 @@ a, a:hover, a:focus, a:active {
 }
 
 /*--- nav styles ---*/
+nav ul {
+	padding: 0;
+	margin: 0;
+}
+nav li {
+	margin-bottom: 0.25em;
+}
 nav a {
 	display: block;
 	text-decoration: none;
@@ -120,21 +137,12 @@ nav a:hover, nav a:focus, nav a:active {
 }
 
 /*--- rec'd games/mod styles ---*/
-.img {
-	background: #4A859D;
-	height: 150px;
+.img img {
+	display: block;
+	width: 200px;
 	margin-bottom: 0.25em;
 	border-radius: 20px;
 }
-
-img{
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 70%;
-}
-
-
 
 /*--- content styles ---*/
 a {
