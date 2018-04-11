@@ -34,7 +34,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-dd {
+dd, ol {
 	padding: 10px;
 }
 ol, ul {
